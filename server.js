@@ -1,9 +1,5 @@
 require("dotenv").config();
-<<<<<<< HEAD
-=======
 
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
-const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require("path");
@@ -27,33 +23,18 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-<<<<<<< HEAD
-transporter.verify((err) => {
-  if (err) console.error("Email server error:", err);
-=======
 transporter.verify((error) => {
   if (error) console.error("Email server error:", error);
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
   else console.log("Email server ready");
 });
 
 /* -----------------------------
-<<<<<<< HEAD
-   API Route: Send Email
-=======
    API ROUTES
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
 ----------------------------- */
 app.post("/send-email", async (req, res) => {
   const { institution, name, reason, date, visitors, email, phone } = req.body;
 
   if (!institution || !name || !reason || !date || !visitors || !email || !phone) {
-<<<<<<< HEAD
-    return res.status(400).json({ success: false, message: "All fields are required" });
-  }
-
-  try {
-=======
     return res.status(400).json({
       success: false,
       message: "All fields are required"
@@ -62,7 +43,6 @@ app.post("/send-email", async (req, res) => {
 
   try {
 
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
     const adminMail = {
       from: `"Visit Request System" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
@@ -172,11 +152,6 @@ app.post("/send-email", async (req, res) => {
     await transporter.sendMail(visitorMail);
 
     res.status(200).json({ success: true, message: "Emails sent successfully" });
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Email error:", error);
-    res.status(500).json({ success: false, message: "Failed to send email" });
-=======
 
   } catch (error) {
 
@@ -187,18 +162,10 @@ app.post("/send-email", async (req, res) => {
       message: "Failed to send email"
     });
 
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
   }
 });
 
 /* -----------------------------
-<<<<<<< HEAD
-   Serve React frontend
------------------------------ */
-const buildPath = path.join(__dirname, "frontend/build");
-app.use(express.static(buildPath));
-app.get("*", (req, res) => res.sendFile(path.join(buildPath, "index.html")));
-=======
    Serve React Build
 ----------------------------- */
 
@@ -217,19 +184,13 @@ app.get("/", (req, res) => {
 app.get("*", (req, res) => {
   res.sendFile(path.join(buildPath, "index.html"));
 });
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
 
 /* -----------------------------
    Start Server
 ----------------------------- */
-<<<<<<< HEAD
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-=======
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
