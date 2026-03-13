@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "visit-parliament-backend",
   "version": "1.0.0",
   "main": "server.js",
@@ -13,3 +14,23 @@
     "nodemailer": "^6.9.13"
   }
 }
+=======
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Visit Parliament email backend",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.22.1",
+    "nodemailer": "^6.10.1"
+  },
+  "keywords": []
+}
+>>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
