@@ -1,20 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "visit-parliament-backend",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.13"
-  }
-}
-=======
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
@@ -33,4 +17,3 @@
   },
   "keywords": []
 }
->>>>>>> 2c64843f6bcd141bc028b8bc247af78b24e2dc1f
